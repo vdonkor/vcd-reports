@@ -1,0 +1,15 @@
+#do not use this in production
+version: '3.1'
+
+services:
+
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: iamStrongSecret
+      MYSQL_DATABASE: usage
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: iamStrongSecret
+    ports:
+      - "3306:3306"
